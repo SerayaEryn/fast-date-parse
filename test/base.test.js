@@ -165,7 +165,7 @@ test('parse 11:12:13 / HH:mm:ss', (t) => {
 })
 
 test('parse 12-25-1995 / MM-DD-YYYY', (t) => {
-  t.plan(7)
+  t.plan(14)
   const dateParser = new DateParser('MM-DD-YYYY')
 
   const date = dateParser.parse('12-25-1995')
@@ -177,10 +177,17 @@ test('parse 12-25-1995 / MM-DD-YYYY', (t) => {
   t.strictEquals(date.getMinutes(), 0)
   t.strictEquals(date.getSeconds(), 0)
   t.strictEquals(date.getMilliseconds(), 0)
+  t.strictEquals(date.getFullYear(), moment('12-25-1995', 'MM-DD-YYYY').year())
+  t.strictEquals(date.getMonth(), moment('12-25-1995', 'MM-DD-YYYY').month())
+  t.strictEquals(date.getDate(), moment('12-25-1995', 'MM-DD-YYYY').date())
+  t.strictEquals(date.getHours(), moment('12-25-1995', 'MM-DD-YYYY').hours())
+  t.strictEquals(date.getMinutes(), moment('12-25-1995', 'MM-DD-YYYY').minutes())
+  t.strictEquals(date.getSeconds(), moment('12-25-1995', 'MM-DD-YYYY').seconds())
+  t.strictEquals(date.getMilliseconds(), moment('12-25-1995', 'MM-DD-YYYY').milliseconds())
 })
 
 test('parse 11:12:13 / HH:mm:ss', (t) => {
-  t.plan(7)
+  t.plan(14)
   const dateParser = new DateParser('HH:mm:ss')
 
   const date = dateParser.parse('11:12:13')
@@ -192,10 +199,17 @@ test('parse 11:12:13 / HH:mm:ss', (t) => {
   t.strictEquals(date.getMinutes(), 12)
   t.strictEquals(date.getSeconds(), 13)
   t.strictEquals(date.getMilliseconds(), 0)
+  t.strictEquals(date.getFullYear(), moment('11:12:13', 'HH:mm:ss').year())
+  t.strictEquals(date.getMonth(), moment('11:12:13', 'HH:mm:ss').month())
+  t.strictEquals(date.getDate(), moment('11:12:13', 'HH:mm:ss').date())
+  t.strictEquals(date.getHours(), moment('11:12:13', 'HH:mm:ss').hours())
+  t.strictEquals(date.getMinutes(), moment('11:12:13', 'HH:mm:ss').minutes())
+  t.strictEquals(date.getSeconds(), moment('11:12:13', 'HH:mm:ss').seconds())
+  t.strictEquals(date.getMilliseconds(), moment('11:12:13', 'HH:mm:ss').milliseconds())
 })
 
 test('parse 11:12:13 / ss:mm:HH', (t) => {
-  t.plan(7)
+  t.plan(14)
   const dateParser = new DateParser('ss:mm:HH')
 
   const date = dateParser.parse('11:12:13')
@@ -207,4 +221,33 @@ test('parse 11:12:13 / ss:mm:HH', (t) => {
   t.strictEquals(date.getMinutes(), 12)
   t.strictEquals(date.getSeconds(), 11)
   t.strictEquals(date.getMilliseconds(), 0)
+  t.strictEquals(date.getFullYear(), moment('11:12:13', 'ss:mm:HH').year())
+  t.strictEquals(date.getMonth(), moment('11:12:13', 'ss:mm:HH').month())
+  t.strictEquals(date.getDate(), moment('11:12:13', 'ss:mm:HH').date())
+  t.strictEquals(date.getHours(), moment('11:12:13', 'ss:mm:HH').hours())
+  t.strictEquals(date.getMinutes(), moment('11:12:13', 'ss:mm:HH').minutes())
+  t.strictEquals(date.getSeconds(), moment('11:12:13', 'ss:mm:HH').seconds())
+  t.strictEquals(date.getMilliseconds(), moment('11:12:13', 'ss:mm:HH').milliseconds())
+})
+
+test('parse 12-25-1995 11:12:13 / MM-DD-YYYY HH:mm:ss', (t) => {
+  t.plan(14)
+  const dateParser = new DateParser('MM-DD-YYYY HH:mm:ss')
+
+  const date = dateParser.parse('12-25-1995 11:12:13')
+
+  t.strictEquals(date.getFullYear(), 1995)
+  t.strictEquals(date.getMonth(), 11)
+  t.strictEquals(date.getDate(), 25)
+  t.strictEquals(date.getHours(), 11)
+  t.strictEquals(date.getMinutes(), 12)
+  t.strictEquals(date.getSeconds(), 13)
+  t.strictEquals(date.getMilliseconds(), 0)
+  t.strictEquals(date.getFullYear(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').year())
+  t.strictEquals(date.getMonth(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').month())
+  t.strictEquals(date.getDate(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').date())
+  t.strictEquals(date.getHours(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').hours())
+  t.strictEquals(date.getMinutes(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').minutes())
+  t.strictEquals(date.getSeconds(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').seconds())
+  t.strictEquals(date.getMilliseconds(), moment('12-25-1995 11:12:13', 'MM-DD-YYYY HH:mm:ss').milliseconds())
 })
