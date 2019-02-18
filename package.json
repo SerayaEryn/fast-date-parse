@@ -1,0 +1,40 @@
+{
+  "name": "fast-date-parse",
+  "version": "1.0.0",
+  "description": "fast date parsing",
+  "main": "lib/FastDateParse.js",
+  "scripts": {
+    "unit": "tap test/*.test.js",
+    "test": "npm run lint && npm run unit",
+    "lint": "standard lib/* test/*.test.js",
+    "coveralls": "npm run unit --  --cov",
+    "coverage": "npm run coveralls && tap --coverage-report=lcov",
+    "benchmark": "node benchmark/benchmark.js"
+  },
+  "author": "Denis Fäcke",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "coveralls": "^3.0.2",
+    "fecha": "^2.3.3",
+    "moment": "^2.22.2",
+    "standard": "^12.0.1",
+    "tap": "^12.0.1"
+  },
+  "dependencies": {
+    "generate-function": "^2.3.1"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerayaEryn/fast-date-parse.git"
+  },
+  "keywords": [
+    "date",
+    "parse",
+    "parser",
+    "time"
+  ]
+}
