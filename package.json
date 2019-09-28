@@ -37,5 +37,8 @@
     "parse",
     "parser",
     "time"
+  ],
+  "files": [
+    "lib"
   ]
 }
