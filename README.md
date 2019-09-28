@@ -1,6 +1,6 @@
 # fast-date-parse
 
-[![Build Status](https://travis-ci.org/SerayaEryn/fast-date-parse.svg?branch=master)](https://travis-ci.org/SerayaEryn/fast-date-parse)
+![Build Status](https://github.com/SerayaEryn/fast-date-parse/workflows/ci/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/SerayaEryn/fast-date-parse/badge.svg?branch=master)](https://coveralls.io/github/SerayaEryn/fast-date-parse?branch=master)
 [![NPM version](https://img.shields.io/npm/v/fast-date-parse.svg?style=flat)](https://www.npmjs.com/package/fast-date-parse)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
