@@ -14,19 +14,19 @@
   "author": "Denis Fäcke",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^2.4.0",
+    "ava": "^3.1.0",
     "benchmark": "^2.1.4",
     "coveralls": "^3.0.2",
-    "fecha": "^2.3.3",
+    "fecha": "^4.0.0",
     "moment": "^2.22.2",
-    "nyc": "^14.1.1",
-    "standard": "^12.0.1"
+    "nyc": "^15.0.0",
+    "standard": "^14.3.1"
   },
   "dependencies": {
     "generate-function": "^2.3.1"
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">=10.13.0"
   },
   "repository": {
     "type": "git",
